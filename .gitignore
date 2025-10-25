@@ -1,0 +1,47 @@
+# Compiled class files
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# Spring Boot / Maven / Gradle
+target/
+build/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Generated sources
+/generated/
+
+# Database
+*.db
+*.h2.db
+
+# Environment files
+.env
