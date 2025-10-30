@@ -12,7 +12,7 @@ public class Pokemon {
 //        this.id = id;
 //        this.weight = weight;
 //        this.won = won;
-//        this.img = img;
+//        this.img = img
 //    }
 
     public String getName() {
