@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" 
+lang="pt-br">
+    <title>Pokémon API Frontend</title>
+</head>
+<body>
+    <h1>Buscar Pokémon</h1>
+    <input type="text" id="pokeName" placeholder="Nome do Pokémon">
+    <button onclick="buscar()">Buscar</button>
+    <div id="resultado"></div>
+    <script>
+        function buscar() {
+            const name = document.getElementById('pokeName').value;
+            fetch('/api/pokemon/' + name)
+                .then(resp => resp.json())
+                .then(data => {
+                    if(data.name) {
+                        document.getElementById('resultado').innerHTML =
+                            `<h2>${data.name}</h2>
+                             <img src="${data.img}" alt="${data.name}">
+                             <p>ID: ${data.id}</p>
+                             <p>Peso: ${data.weight}</p>`;
+                    } else {
+                        document.getElementById('resultado').innerText = 'Pokémon não encontrado!';
+                    }
+                })
+                .catch(() => document.getElementById('resultado').innerText = 'Erro ao buscar Pokémon!');
+        }
+    </script>
+</body>
+</html>
